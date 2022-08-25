@@ -1,0 +1,40 @@
+<div class="cart_top container_fluid">
+    <div class="container d_flex">
+        <div class="items">
+            <a>
+                <img src="https://bit.ly/3dSnneC"><br><br><br>
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://bit.ly/3CJe631"><br><br><br>
+                <h6>Ice Creams</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://bit.ly/3PLyvqI"><br><br><br>
+                <h6>Chocolates</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://bit.ly/3QPNj9o"><br><br><br>
+                <h6>Cakes</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+<div class="container_products">
+    <ng-container *ngFor="let item of productList">
+        <div class="card" style="text-transform: capitalize;">
+            <img src="{{item.image}}" alt="">
+            <p style="color: chocolate;">{{item.title}}</p>
+            <p style="font: size 15px;">Rs. {{item.price}}</p>
+            <p style="font-size: 15px;">Description : {{item.description}}</p>
+            <button mat-flat-button color="warn" (click)="addToCart(item)">Add to cart</button>
+        </div>
+    </ng-container>
+</div>

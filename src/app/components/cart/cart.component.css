@@ -1,0 +1,50 @@
+.container{
+    height: auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 20px solid rgba(251, 90, 31, 0.772);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.center h5,h6{
+    color: orange;
+}
+
+.center img{
+    height: auto;
+    width: 50%;
+}
+
+.card_table{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    border: 3px solid orangered;
+}
+table{
+    text-align: center;
+}
+thead{
+    color: rgb(185, 26, 26);
+}
+th,td{
+    padding: 30px;
+}

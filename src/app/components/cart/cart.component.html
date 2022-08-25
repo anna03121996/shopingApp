@@ -1,0 +1,62 @@
+<!-- <p>cart works!</p> -->
+<ng-container *ngIf="products.length !=0">
+    <div class="card_table">
+        <table class="table_responsive">
+
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of products, let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.title}}</td>
+                    <td><img src="{{item.image}}" width="100px" height="auto"></td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.Quantity}}</td>
+                    <td>{{item.total}}</td>
+                    <td>
+                        <button (click)="removeProduct(item)" mat-flat-button color="warn"><mat-icon>delete</mat-icon></button>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td> <button (click)="clearProducts()" mat-button style="background-color:red">Empty Cart</button></td>
+                    <td> <button routerLink="/products" mat-button style="background-color: yellow;">Shop More</button></td>
+                    <td> <button (click)="checkOut(this)" mat-button style="background-color: green;">Check Out</button></td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+
+        <div class="card">
+            <mat-card>My Cart</mat-card>
+        </div>
+    
+        <div class="center">
+            <img src="https://bit.ly/3dSc9a2" alt="">
+            <h3>Your cart is empty</h3>
+            <h4>Add item to it now</h4>
+            <button routerLink="/products" mat-flat-button color="warn">Shop Now</button>
+        </div>
+    
+    </div>
+</ng-container>

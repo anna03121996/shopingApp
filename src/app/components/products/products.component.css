@@ -1,0 +1,53 @@
+.d_flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 68, 0, 0.718);
+    padding: 5% 0;
+}
+img{
+    height: 10%;
+    width: 30%;
+}
+img:hover{
+    transform: scale(0.8);
+}
+h6{
+    font-size: 40px;
+}
+h6:hover{
+    color: rgba(255, 166, 0, 0.662);
+}
+
+.container_products{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card{
+    height: 50%;
+    width: auto;
+    background-color: rgba(255, 68, 0, 0.626);
+    padding: 3%;
+    margin: 2%;
+}
+
+.card img{
+    height: 100px;
+    width: auto;
+}
+
+.container_products p{
+    font-size: 25px;
+}
+
+.container_products h5{
+    font-size: 30px;
+}
